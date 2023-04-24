@@ -7,16 +7,17 @@
 #include <stdarg.h> /*handles all variadic functions */
 #include <unistd.h> /* handles the write function used for displaying data*/
 #include <string.h> /* string headers files */
+
+ /* SIZE MACROS */
+#define SIZEOF_SHORT 1
+#define SIZEOF_LONG 2
+#define BUFF_SIZE 1024
+
 /**
  * struct arguments - A structure for all formats of arguments
  * @symbol: the operator of the struct
  * @f: functions in the struct
  */
-
-/* SIZE MACROS */
-#define SIZEOF_SHORT 1
-#define SIZEOF_LONG 2
-#define BUFF_SIZE 1024
 
 struct arguments
 {
