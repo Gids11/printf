@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	arguments_t f_list[] = {
 		{"c", print_char},
 		{"i", print_integer},
-		{"d", print_interger},
+		{"d", print_integer},
 		{"s", print_string},
 		{"x", print_hex},
 		{"X", print_HEX},

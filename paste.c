@@ -41,12 +41,13 @@ for (a = 0; format[a] != '\0'; a++)
 				return (-1);
 			}
 			a = a + 1;
-		}
-		else
-		{
-			_putchar_(format[a]);
-			pasted_chars++;
-		}
 	}
+
+	else
+	{
+		_putchar_(format[a]);
+		pasted_chars++;
+	}
+}
 	return (pasted_chars);
 }

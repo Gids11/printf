@@ -6,7 +6,7 @@
 #include <limits.h> /* handles predefined limits of various data types */
 #include <stdarg.h> /*handles all variadic functions */
 #include <unistd.h> /* handles the write function used for displaying data*/
-
+#include <string.h> /* string headers files */
 /**
  * struct arguments - A structure for all formats of arguments
  * @symbol: the operator of the struct
@@ -16,7 +16,7 @@
 struct arguments
 {
 	char *symbol;
-	int (*f)(va_list);
+	int (*f)(va_list list);
 };
 typedef struct arguments arguments_t;
 
@@ -31,6 +31,9 @@ int print_float(va_list list);
 int print_percent(va_list list);
 int print_octal(va_list list);
 int print_binary(va_list);
+int print_unsigned_integer(va_list list);
+int print_rot13(va_list list);
+int print_reversed_string(va_list list);
 int print_hex(va_list list);
 int print_HEX(va_list list);
 int paste(const char *format, arguments_t f_lists[], va_list arg_list);
