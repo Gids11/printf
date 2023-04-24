@@ -74,7 +74,7 @@ int print_integer(va_list list)
 		buffer[i] = '-';
 		k = &buffer[i];
 	}
-	else 
+	else
 		k = &buffer[i + 1];
 	return (write(1, k, strlen(k)));
 }
