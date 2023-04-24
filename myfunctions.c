@@ -32,5 +32,5 @@ int print_string(va_list list)
 int print_percent(va_list list)
 {
 	(void)(list);
-	return (write(1, "%%", 1));
+	return (write(1, "%", 1));
 }
