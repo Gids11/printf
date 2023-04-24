@@ -22,7 +22,7 @@ int print_string(va_list list)
 	char *p = va_arg(list, char*);
 
 	if (p == NULL)
-		p = "(null)"
+		p = "(null)";
 	return (write(1, p, strlen(p)));
 }
 
