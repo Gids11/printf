@@ -33,5 +33,6 @@ int print_octal(va_list list);
 int print_binary(va_list);
 int print_hex(va_list list);
 int print_HEX(va_list list);
+int paste(const char *format, arguments_t f_lists[], va_list arg_list);
 
 #endif /* MAIN_H */
