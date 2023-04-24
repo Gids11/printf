@@ -13,6 +13,11 @@
  * @f: functions in the struct
  */
 
+/* SIZE MACROS */
+#define SIZEOF_SHORT 1
+#define SIZEOF_LONG 2
+#define BUFF_SIZE 1024
+
 struct arguments
 {
 	char *symbol;
@@ -37,5 +42,6 @@ int print_reversed_string(va_list list);
 int print_hex(va_list list);
 int print_HEX(va_list list);
 int paste(const char *format, arguments_t f_lists[], va_list arg_list);
+
 
 #endif /* MAIN_H */

@@ -10,9 +10,9 @@ int find_the_size(int *i, const char *format)
 	int sizeofnum = 0;
 
 	if (format[*i + 1] == 'h')
-		sizeofnum = S_SHORT;
+		sizeofnum = (SIZEOF_SHORT);
 	else if (format[*i + 1] == 'l')
-		sizeofnum = S_LONG;
+		sizeofnum = (SIZEOF_LONG);
 
 	if (sizeofnum != 0)
 		*i += 1;
@@ -29,21 +29,20 @@ int find_the_size(int *i, const char *format)
  */
 long int format_size(int size, long int value)
 {
-	if (size == S_SHORT)
+	if (size == SIZEOF_SHORT)
 		return ((short)value);
-	else if (size == S_LONG)
+	else if (size == SIZEOF_LONG)
 		return (value);
-		 
+
 	return ((int)value);
 }
 
 /**
- * print_int - Print int
+ * print_integer - Print int
  * @list: List of variadic arguments passed
- * @buffer: A temporary array of memory to hold the printable chars
  * Return: The printed number of chars.
  */
-int print_int(va_list list)
+int print_integer(va_list list)
 {
 	char buffer[BUFF_SIZE];
 	char *k;
@@ -71,8 +70,12 @@ int print_int(va_list list)
 	}
 
 	if (negative)
+	{
 		buffer[i] = '-';
-	k = buffer[i];
+		k = &buffer[i];
+	}
+	else 
+		k = &buffer[i + 1];
 	return (write(1, k, strlen(k)));
 }
 
