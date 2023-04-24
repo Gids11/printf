@@ -1,19 +1,19 @@
 #include "main.h"
 
-char *memcpy(char *dest, char *src, unsigned int n);
+char *memcpy_(char *dest, char *src, unsigned int n);
 char *reversed(char *str);
 void _base(char *str);
 unsigned int baselength(unsigned int num, int base);
 
 /**
- * *memcpy - memory copying function
+ * *memcpy_ - memory copying function
  * @dest: destination
  * @src: source
  * @n: bytes to copy
  *
  * Return: a pointer to dest
  */
-char *memcpy(char *dest, char *src, unsigned int n)
+char *memcpy_(char *dest, char *src, unsigned int n)
 {
 	unsigned int a;
 
@@ -41,7 +41,7 @@ char *reversed(char *str)
 	d  = malloc(sizeof(char) * a + 1);
 		if (d == NULL)
 			return (NULL);
-		memcpy(d, str, a);
+		memcpy_(d, str, a);
 		for (b = 0; b < a; b++, a--)
 		{
 			c = d[a - 1];

@@ -45,6 +45,6 @@ int paste(const char *format, arguments_t f_lists[], va_list arg_list);
 void _base(char *str);
 unsigned int baselength(unsigned int num, int base);
 char *reversed(char *str);
-char *memcpy(char *dest, char *src, unsigned int n);
+char *memcpy_(char *dest, char *src, unsigned int n);
 
 #endif /* MAIN_H */
