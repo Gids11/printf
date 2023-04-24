@@ -42,6 +42,9 @@ int print_reversed_string(va_list list);
 int print_hex(va_list list);
 int print_HEX(va_list list);
 int paste(const char *format, arguments_t f_lists[], va_list arg_list);
-
+void _base(char *str);
+unsigned int baselength(unsigned int num, int base);
+char *reversed(char *str);
+char *memcpy(char *dest, char *src, unsigned int n);
 
 #endif /* MAIN_H */
