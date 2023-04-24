@@ -11,17 +11,8 @@ int _printf(const char *format, ...)
 	int pasted_chars;
 	arguments_t f_list[] = {
 		{"c", print_char},
-		{"i", print_integer},
-		{"d", print_integer},
 		{"s", print_string},
-		{"x", print_hex},
-		{"X", print_HEX},
-		{"o", print_octal},
-		{"u", print_unsigned_integer},
 		{"%", print_percent},
-		{"b", print_binary},
-		{"R", print_rot13},
-		{"r", print_reversed_string},
 		{NULL, NULL}
 	};
 	va_list arg_list;
