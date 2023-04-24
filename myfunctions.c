@@ -29,8 +29,10 @@ int print_string(va_list list)
  * @list: List a of arguments
  * Return: the print count of bytes.
  */
-int print_percent(__attrbute__((unused))va_list list)
+int print_percent(va_list list)
 {
+	(void)(list);
+
 	_putchar_('%');
 	return (1);
 }
