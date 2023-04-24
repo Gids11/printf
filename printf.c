@@ -13,6 +13,8 @@ int _printf(const char *format, ...)
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
+		{"i", print_integer},
+		{"d", print_integer},
 		{NULL, NULL}
 	};
 	va_list arg_list;
