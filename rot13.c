@@ -2,7 +2,7 @@
 /**
  * print_rot13 - prints rot13 from string
  * @list: spring to print from
- *
+ * @size: the required size of int argument
  * Return: the rot13
  */
 int print_rot13(va_list list, int size)
@@ -11,7 +11,7 @@ int print_rot13(va_list list, int size)
 	char *c;
 	char d[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char e[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	
+
 	(void)(size);
 	c = va_arg(list, char *);
 	if (c == NULL)

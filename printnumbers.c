@@ -3,6 +3,7 @@
  * find_the_size - Calculates the size to cast the argument
  * @i: List of arguments to be printed.
  * @format: Formatted string in which to print the arguments
+ * @a: a pointer to the current loop value of the format.
  * Return: size of num - as specified by precision.
  */
 int find_the_size(int *a, const char *format)
@@ -40,6 +41,7 @@ long int format_size(int size, long int value)
 /**
  * print_integer - Print int
  * @list: List of variadic arguments passed
+ * @size: the required size of int argument
  * Return: The printed number of chars.
  */
 int print_integer(va_list list, int size)

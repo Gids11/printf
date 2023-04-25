@@ -2,6 +2,7 @@
 /**
  * print_reversed_string - a function that prints a string in reverse
  * @list: argument passed
+ * @size: the required size of int argument
  *
  * Return: printed characters
  */

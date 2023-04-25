@@ -2,6 +2,7 @@
 /**
  * print_char - prints only char
  * @list: List a of arguments
+ * @size: the required size of int argument
  * Return: the print count of chars.
  */
 
@@ -19,6 +20,7 @@ int print_char(va_list list, int size)
 /**
  * print_string - prints strings
  * @list: List a of arguments
+ * @size: the required size of int argument
  * Return: the print count of strings.
  */
 int print_string(va_list list, int size)
@@ -35,6 +37,7 @@ int print_string(va_list list, int size)
 /**
  * print_percent - prints percent symbol to std output.
  * @list: List a of arguments
+ * @size: the required size of int argument
  * Return: the print count of bytes.
  */
 int print_percent(va_list list,  int size)
