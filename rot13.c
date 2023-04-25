@@ -5,14 +5,14 @@
  *
  * Return: the rot13
  */
-int print_rot13(va_list list)
+int print_rot13(va_list list, int size)
 {
-	int a;
-	int b;
+	int a, b;
 	char *c;
 	char d[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char e[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
+	
+	(void)(size);
 	c = va_arg(list, char *);
 	if (c == NULL)
 		return (-1);

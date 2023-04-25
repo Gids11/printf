@@ -5,9 +5,13 @@
  * Return: the print count of chars.
  */
 
-int print_char(va_list list)
+int print_char(va_list list, int size)
 {
-	char p = va_arg(list, int);
+	char p;
+
+	(void)(size);
+
+	p = va_arg(list, int);
 
 	return (write(1, &p, 1));
 }
@@ -17,13 +21,15 @@ int print_char(va_list list)
  * @list: List a of arguments
  * Return: the print count of strings.
  */
-int print_string(va_list list)
+int print_string(va_list list, int size)
 {
-	char *p = va_arg(list, char*);
+	char *ptr = va_arg(list, char*);
 
-	if (p == NULL)
-		p = "(null)";
-	return (write(1, p, strlen(p)));
+	(void)(size);
+
+	if (ptr == NULL)
+		ptr = "(null)";
+	return (write(1, ptr, strlen(ptr)));
 }
 
 /**
@@ -31,9 +37,10 @@ int print_string(va_list list)
  * @list: List a of arguments
  * Return: the print count of bytes.
  */
-int print_percent(va_list list)
+int print_percent(va_list list,  int size)
 {
 	(void)(list);
+	(void)(size);
 
 	_putchar_('%');
 	return (1);

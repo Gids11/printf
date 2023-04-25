@@ -11,18 +11,20 @@
 
 int paste(const char *format, arguments_t f_list[], va_list arg_list)
 {
-int a, b, r_val, pasted_chars;
+int a, b, size, r_val, pasted_chars;
 
 pasted_chars = 0;
 for (a = 0; format[a] != '\0'; a++)
 {
 	if (format[a] == '%')
 	{
+		size = find_the_size(&a, format);
+
 		for (b = 0; f_list[b].symbol != NULL; b++)
 		{
 			if (format[a + 1] == f_list[b].symbol[0])
 			{
-				r_val = f_list[b].f(arg_list);
+				r_val = f_list[b].f(arg_list, size);
 				if (r_val == -1)
 					return (-1);
 				pasted_chars += r_val;

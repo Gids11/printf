@@ -5,17 +5,17 @@
  * @format: Formatted string in which to print the arguments
  * Return: size of num - as specified by precision.
  */
-int find_the_size(int *i, const char *format)
+int find_the_size(int *a, const char *format)
 {
 	int sizeofnum = 0;
 
-	if (format[*i + 1] == 'h')
+	if (format[*a + 1] == 'h')
 		sizeofnum = (SIZEOF_SHORT);
-	else if (format[*i + 1] == 'l')
+	else if (format[*a + 1] == 'l')
 		sizeofnum = (SIZEOF_LONG);
 
 	if (sizeofnum != 0)
-		*i += 1;
+		*a += 1;
 
 	return (sizeofnum);
 }
@@ -42,7 +42,7 @@ long int format_size(int size, long int value)
  * @list: List of variadic arguments passed
  * Return: The printed number of chars.
  */
-int print_integer(va_list list)
+int print_integer(va_list list, int size)
 {
 	char buffer[BUFF_SIZE];
 	char *k;
@@ -50,6 +50,8 @@ int print_integer(va_list list)
 	int negative = 0;
 	long int n = va_arg(list, long int);
 	unsigned long int m;
+
+	n = format_size(size, n);
 
 	if (n == 0)
 		buffer[i--] = '0';

@@ -5,12 +5,13 @@
  *
  * Return: printed characters
  */
-int print_reversed_string(va_list list)
+int print_reversed_string(va_list list, int size)
 {
 	int a;
 	char *b;
 	char *c;
 
+	(void)(size);
 	b = va_arg(list, char *);
 	if (b == NULL)
 		return (-1);
