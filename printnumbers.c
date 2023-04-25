@@ -45,10 +45,8 @@ long int format_size(int size, long int value)
  */
 int print_integer(va_list list, int size)
 {
-	char buffer[BUFF_SIZE];
-	char *k;
-	int i = BUFF_SIZE - 2;
-	int negative = 0;
+	char *k, buffer[BUFF_SIZE];
+	int i = BUFF_SIZE - 2, negative = 0;
 	long int n = va_arg(list, long int);
 	unsigned long int m;
 
