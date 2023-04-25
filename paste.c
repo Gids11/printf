@@ -8,7 +8,6 @@
  *
  * Return: All parameters printed
  */
-
 int paste(const char *format, arguments_t f_list[], va_list arg_list)
 {
 int a, b, size, r_val, pasted_chars;
@@ -19,7 +18,6 @@ for (a = 0; format[a] != '\0'; a++)
 	if (format[a] == '%')
 	{
 		size = find_the_size(&a, format);
-
 		for (b = 0; f_list[b].symbol != NULL; b++)
 		{
 			if (format[a + 1] == f_list[b].symbol[0])
@@ -44,7 +42,6 @@ for (a = 0; format[a] != '\0'; a++)
 			}
 			a = a + 1;
 	}
-
 	else
 	{
 		_putchar_(format[a]);
