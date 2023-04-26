@@ -43,6 +43,7 @@ int print_rot13(va_list list,  int size);
 int print_reversed_string(va_list list,  int size);
 int print_hex(va_list list,  int size);
 int print_HEX(va_list list,  int size);
+int print_string_S(va_list list, int size);
 
 int paste(const char *format, arguments_t f_lists[], va_list arg_list);
 void _base(char *str);
